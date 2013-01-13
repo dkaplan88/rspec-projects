@@ -14,9 +14,9 @@ end
 Given /^I am not yet playing$/ do 
 end
 
-When /^I start a new game$/ do 
+When /^I start a new game$/ do |secret|
   game = Codebreaker::Game.new(output)
-  game.start
+  game.start(secret)
 end
 
 Then /^I should see "([^"]*)"$/ do |message|
